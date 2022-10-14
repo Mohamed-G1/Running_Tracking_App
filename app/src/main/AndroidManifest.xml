@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RunningApp">
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true"
             android:launchMode="singleTask">
             <intent-filter>
@@ -25,6 +25,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <service
+            android:name=".services.TrackingService"
+            android:foregroundServiceType="location" />
 
         <meta-data
             android:name="com.google.android.gms.version"
